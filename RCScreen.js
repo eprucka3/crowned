@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import { Alert, AppRegistry, Platform, Button, StyleSheet, Text, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Dimensions } from 'react-native';
+import { Alert, AppRegistry, Platform, Button, StyleSheet, Text, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View, Dimensions, ScrollView } from 'react-native';
 import  { Video } from 'expo';
 import { MaterialIcons, Octicons } from '@expo/vector-icons';
 
@@ -28,20 +28,42 @@ export default class RCScreen extends React.Component {
      const { width } = Dimensions.get('window');
 
  return (
-   <View style={styles.container}>
-         <View>
-             <TouchableOpacity onPress={this.handlePlayAndPause}>
-                     <Video
-                         source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                         shouldPlay={this.state.shouldPlay}
-                         resizeMode="cover"
-                         style={{ width, height: 300 }}
-                         isMuted={this.state.mute}
-                     />
+    <ScrollView>
+        <View style={styles.container}>
+            <TouchableOpacity onPress={this.handlePlayAndPause}>
+                    <Video
+                        source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                        shouldPlay={this.state.shouldPlay}
+                        resizeMode="cover"
+                        style={{ width, height: 300 }}
+                        isMuted={this.state.mute}
+                    />
             </TouchableOpacity>
         </View>
-    </View>
-     );
+        <View style={styles.container}>
+                <TouchableOpacity onPress={this.handlePlayAndPause}>
+                        <Video
+                            source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                            shouldPlay={this.state.shouldPlay}
+                            resizeMode="cover"
+                            style={{ width, height: 300 }}
+                            isMuted={this.state.mute}
+                        />
+                </TouchableOpacity>
+            </View>
+            <View style={styles.container}>
+                    <TouchableOpacity onPress={this.handlePlayAndPause}>
+                            <Video
+                                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                                shouldPlay={this.state.shouldPlay}
+                                resizeMode="cover"
+                                style={{ width, height: 300 }}
+                                isMuted={this.state.mute}
+                            />
+                    </TouchableOpacity>
+                </View>
+    </ScrollView>
+    );
 }
 }
 
@@ -51,6 +73,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingTop: 30
     },
     controlBar: {
         position: 'absolute',
