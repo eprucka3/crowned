@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf: 'center',
         fontSize: 60,
-        color: 'orange',
+        color: 'black',
         fontWeight: 'bold',
         paddingTop: 100
     }
