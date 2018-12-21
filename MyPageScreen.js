@@ -7,6 +7,7 @@ export default class MyPageScreen extends React.Component {
     return (
             <View style={styles.background}>
                 <Text style={styles.titleText}>MY PAGE</Text>
+                <Text style={styles.otherText}>Update my profile picture</Text>
             </View>
     );
   }
@@ -27,6 +28,15 @@ const styles = StyleSheet.create({
         fontSize: 60,
         color: 'yellow',
         fontWeight: 'bold',
+        paddingTop: 100
+    }
+    otherText: {
+        flex: 2,
+        justify content: 'left',
+        alignItems: 'left',
+        fontSize: 40,
+        color: 'red'
+        fontWeight: 'bold'
         paddingTop: 100
     }
 });
