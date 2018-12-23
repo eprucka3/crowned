@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
         color: 'yellow',
         fontWeight: 'bold',
         paddingTop: 100
-    }
+    },
     otherText: {
         flex: 2,
-        justify content: 'left',
-        alignItems: 'left',
+        justifyContent: 'center',
+        alignItems: 'center',
         fontSize: 40,
-        color: 'red'
-        fontWeight: 'bold'
+        color: 'red',
+        fontWeight: 'bold',
         paddingTop: 100
     }
 });

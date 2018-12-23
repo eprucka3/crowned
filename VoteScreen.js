@@ -40,11 +40,11 @@ export default class VoteScreen extends React.Component {
                     style={{ width, height: 300 }}
                     isMuted={this.state.mute}
                 />
-        </TouchableOpacity>
+            </TouchableOpacity>
         <View style={styles.iconRow}>
             <TouchableOpacity onPress={this.toggleLike}>
                 <Image
-                    source={{uri: 'https://raw.githubusercontent.com/HandlebarLabs/react-native-examples-and-tutorials/master/tutorials/instagram-style-double-tap/src/images/heart.png'}}
+                    source= {this.state.liked ? require('./images/Heart.png') : require('./images/HeartOutline.png')}
                     style={styles.heartIcon}
                     resizeMode="cover"
                 />
@@ -62,15 +62,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    controlBar: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: 45,
+    iconRow: {
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-    }
+        alignSelf: 'stretch',
+        marginTop: 10,
+        paddingVertical: 5,
+        paddingHorizontal: 15,
+    },
+    heartIcon: {
+        width: 21,
+        height: 20,
+    },
 });
