@@ -8,38 +8,9 @@ import PlayScreen from './PlayScreen'
 import RCScreen from './RCScreen'
 import FriendsScreen from './FriendsScreen'
 import MyPageScreen from './MyPageScreen'
+import ComedyScreen from './ComedyScreen'
+import recordVideo from './recordVideo'
 
-const RootStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Vote: VoteScreen,
-    Play: PlayScreen,
-    RC: RCScreen,
-    Friends: FriendsScreen,
-    MyPage: MyPageScreen,
-  },
-  {
-    initialRouteName: 'Home',
-    headerMode: 'none'
-  }
-);
-
-
-const PlayStack = createStackNavigator(
-  {
-
-      Play: PlayScreen,
-    Home: HomeScreen,
-    Vote: VoteScreen,
-    RC: RCScreen,
-    Friends: FriendsScreen,
-    MyPage: MyPageScreen,
-  },
-  {
-    initialRouteName: 'Play',
-    headerMode: 'none'
-  }
-);
 
 export default createAppContainer(createBottomTabNavigator(
   {
@@ -49,7 +20,9 @@ export default createAppContainer(createBottomTabNavigator(
     Vote: { screen: VoteScreen },
     'Royal Court': { screen: RCScreen },
     Friends: { screen: FriendsScreen },
-    'My Page': { screen: MyPageScreen}
+    'My Page': { screen: MyPageScreen},
+    Comedy: { screen: ComedyScreen},
+    Record: { screen: recordVideo}
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({

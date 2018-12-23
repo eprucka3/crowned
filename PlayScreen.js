@@ -9,19 +9,19 @@ export default class PlayScreen extends React.Component {
                 <View style={styles.container}>
                     <Text style={styles.titleText}>Choose a Category</Text>
 
-                    <TouchableOpacity onPress={() => Alert.alert('You tapped the button!')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Comedy')}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>Comedy</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => Alert.alert('You tapped the button!')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Comedy')}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>Adventure</Text>
                         </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => Alert.alert('You tapped the button!')}>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Comedy')}>
                         <View style={styles.button}>
                             <Text style={styles.buttonText}>Food</Text>
                         </View>
