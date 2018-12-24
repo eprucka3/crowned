@@ -10,6 +10,7 @@ import FriendsScreen from './FriendsScreen'
 import MyPageScreen from './MyPageScreen'
 import ComedyScreen from './ComedyScreen'
 import recordVideo from './recordVideo'
+import Library from './Library'
 
 
 export default createAppContainer(createBottomTabNavigator(
@@ -22,7 +23,8 @@ export default createAppContainer(createBottomTabNavigator(
     Friends: { screen: FriendsScreen },
     'My Page': { screen: MyPageScreen},
     Comedy: { screen: ComedyScreen},
-    Record: { screen: recordVideo}
+    Record: { screen: recordVideo},
+    Library: { screen: Library }
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
