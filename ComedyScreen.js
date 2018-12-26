@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { Alert, AppRegistry, Platform, Button, StyleSheet, Text, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback, View } from 'react-native';
+import {Permissions } from 'expo';
 
 export default class ComedyScreen extends React.Component {
+    async componentDidMount() {
+      const { status } = await Permissions.askAsync(Permissions.CAMERA);
+      this.setState({ hasCameraPermission: status === 'granted' });
+    }
   render() {
     return (
+
             <View style={styles.background}>
                 <Text style={styles.titleText}>Challenge: Celebrity Imitation</Text>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Record')}>

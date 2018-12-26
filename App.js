@@ -9,8 +9,8 @@ import RCScreen from './RCScreen'
 import FriendsScreen from './FriendsScreen'
 import MyPageScreen from './MyPageScreen'
 import ComedyScreen from './ComedyScreen'
-import recordVideo from './recordVideo'
-import Library from './Library'
+import PlayVideoScreen from './src/screens/PlayVideoScreen';
+import RecordVideoScreen from './src/screens/RecordVideoScreen';
 
 
 export default createAppContainer(createBottomTabNavigator(
@@ -23,8 +23,8 @@ export default createAppContainer(createBottomTabNavigator(
     Friends: { screen: FriendsScreen },
     'My Page': { screen: MyPageScreen},
     Comedy: { screen: ComedyScreen},
-    Record: { screen: recordVideo},
-    Library: { screen: Library }
+    Record: { screen: RecordVideoScreen},
+    Video: { screen: PlayVideoScreen}
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
