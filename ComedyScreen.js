@@ -4,10 +4,7 @@ import { Alert, AppRegistry, Platform, Button, StyleSheet, Text, TouchableHighli
 import {Permissions } from 'expo';
 
 export default class ComedyScreen extends React.Component {
-    async componentDidMount() {
-      const { status } = await Permissions.askAsync(Permissions.CAMERA);
-      this.setState({ hasCameraPermission: status === 'granted' });
-    }
+
   render() {
     return (
 

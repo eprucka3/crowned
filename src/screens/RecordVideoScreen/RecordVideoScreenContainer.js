@@ -12,9 +12,12 @@ import { videoOperations } from '../../modules/video';
 import RecordVideoScreenView from './RecordVideoScreenView';
 import screens from '../../navigation/screens';
 
-
+const mapDispatchToProps = {
+  addVideo: videoOperations.addVideo,
+};
 
 const enhancer = compose(
+      connect(null, mapDispatchToProps),
   withStateHandlers({
     cameraType: Camera.Constants.Type.back,
     cameraRef: null,
@@ -87,7 +90,7 @@ const enhancer = compose(
           duration: props.duration,
         };
 
-        console.log('yay');
+        props.addVideo(videoItem);
         props.navigation.navigate('Play');
 
         props.setState({
